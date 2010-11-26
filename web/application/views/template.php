@@ -8,7 +8,7 @@
   <meta name="description" content="" />
   <title><?php echo html::specialchars($title) ?></title>
 <?
-  echo html::stylesheet(array('css/reset', 'css/common'), null, FALSE);
+  echo html::stylesheet(array('css/reset', 'css/home'), null, FALSE);
   echo html::stylesheet($css_files, null, FALSE);
 ?>
 </head>

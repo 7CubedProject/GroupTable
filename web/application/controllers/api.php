@@ -1,7 +1,5 @@
 <?php defined('SYSPATH') OR die('No direct access allowed.');
 
-require('/home/gareth/73/trunk/DaPT/web/copy_image.php');
-
 /**
  * @package    gitFlic
  * @author     gmacleod

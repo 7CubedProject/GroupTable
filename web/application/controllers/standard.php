@@ -49,21 +49,10 @@ class Standard_Controller extends Template_Controller {
     return $rows;
   }
 
-  /**
-   * Doesn't include the task description.
-   *
-   * @return array(
-   *           array(
-   *             'taskid'         =>,
-   *             'title'          =>,
-   *             'is_completed'   =>, [true/false]
-   *           ),
-   *           ...
-   *         )
-   */
-  protected function get_task_list() {
+  protected function get_venue_list($groupSize) {
     $result = $this->get_db()->query(
-      "SELECT task_id, task_title, is_completed FROM ".TASK_TABLE.";"
+      "SELECT * FROM ". "venue" ." WHERE " . 
+        sqlite_escape_string($groupSize) . " > 0 " . ";"
     );
     return $this->get_all_results($result);
   }

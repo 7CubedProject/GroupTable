@@ -5,22 +5,24 @@ function createDB($location){
   $db = new SQLite3($location);
   chmod($location, 0666);
 
+// TODO: database
+
 // create table foo and insert sample data 
   $db->exec("BEGIN; 
-          CREATE TABLE task (
-            task_id INTEGER PRIMARY KEY,
-            task_title VARCHAR(100),
-            task_description TEXT,
-            is_completed BOOLEAN
+          CREATE TABLE venue (
+            venue_id INTEGER PRIMARY KEY,
+            venue_min_group_size INTEGER,
+            venue_discount INTEGER,
+            venue_description VARCHAR(500),
+            venue_name TEXT
           );
-          INSERT INTO task (task_title, task_description, is_completed)
-            VALUES('logo', 'the task for the logo', 0); 
-          INSERT INTO task (task_title, task_description, is_completed)
-            VALUES('layout', 'the task for the layout', 0); 
-          INSERT INTO task (task_title, task_description, is_completed)
-            VALUES('brand', 'the task for the brand', 0); 
-          COMMIT;"); 
 
+          INSERT INTO venue (venue_name, venue_description, venue_discount,
+            venue_min_group_size)
+            VALUES('WildCraft', 'Expensive food in waterloo', 15, 20); 
+
+          COMMIT;"); 
+/*
   $db->exec("BEGIN; 
           CREATE TABLE task_stream (
             task_stream_id INTEGER PRIMARY KEY,
@@ -57,7 +59,7 @@ function createDB($location){
           INSERT INTO stream_meta (task_stream_id, task_id, key, value)
             VALUES(2, 2, 'key3', 'value3'); 
           COMMIT;"); 
-
+*/
   // execute a query     
   /*
   
