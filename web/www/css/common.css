@@ -1,0 +1,55 @@
+
+html {
+  background-color: #000;
+}
+
+.task_box {
+  padding: 10px;
+  margin: 10px;
+  color: #ccc;
+  border: 3px solid #ccc;
+  cursor: pointer;
+}
+
+.task_box:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.task_box .checkbox {
+  width: 2em;
+  height: 2em;
+  float: left;
+  border: 3px solid #ccc;
+  cursor: pointer;
+}
+
+.task_box .checkbox:hover {
+  border: 3px solid #fff;
+}
+
+.task_box .title {
+  font-size: 2em;
+  margin-left: 40px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+strong {
+  font-weight: bold;
+}
+
+#kohana-profiler {
+  overflow: auto;
+}
+
+#content pre {
+  padding: 10px;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+  margin-bottom: 10px;
+  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+  line-height: 1.5em;
+}
